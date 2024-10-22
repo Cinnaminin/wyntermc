@@ -1,0 +1,247 @@
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('fonts/Minecraftia.ttf') format('truetype'); /* Keep the font path */
+}
+
+/* Reset default browser padding and margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a standard font to the entire body */
+body {
+    font-family: sans-serif; /* Use a standard font for body text */
+    background-color: #1a1a1a; /* Dark background */
+    color: #f5f5f5;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Smooth scrolling between sections */
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #f5f5f5;
+    font-family: 'Minecraftia';
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0; /* Remove padding */
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center the buttons */
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+nav ul li {
+    margin: 0 10px; /* Space between buttons */
+}
+
+nav ul li a {
+    font-family: 'Minecraftia', sans-serif; /* Apply Minecraft font only to buttons */
+    font-size: 1rem; /* Adjust font size */
+    color: #ffAAFF; /* Default text color (white) */
+    background-color: #8d8d8d; /* Default background color for buttons */
+    border: 3px solid #3a3a3a; /* Dark border */
+    padding: 10px 15px; /* Padding for button look */
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Use Flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    height: 50px; /* Set a fixed height for buttons */
+    min-width: 120px; /* Set a minimum width for buttons */
+    max-width: 200px; /* Optional: Set a maximum width for buttons */
+    box-shadow: 0 5px #3a3a3a; /* Shadow for 3D effect */
+    transition: all 0.2s ease; /* Smooth hover transition */
+}
+
+
+nav ul li a {
+    color: #ffffff; /* Default link color */
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Color on hover (example: gold) */
+}
+
+nav ul li a:active {
+    color: #ff9900; /* Color when link is clicked (example: orange) */
+}
+
+
+nav ul li a:hover {
+    background-color: #b3b3b3; /* Lighter gray on hover */
+    box-shadow: 0 3px #3a3a3a; /* Change shadow for hover effect */
+}
+
+nav ul li a:active {
+    box-shadow: none; /* Remove shadow when pressed */
+    transform: translateY(3px); /* Simulate "pressing" button */
+}
+/* Style for email links */
+a {
+    color: #ffffff; /* Default link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    color: #ffcc00; /* Color on hover (example: gold) */
+}
+
+/* Specific style for email link */
+a[href^="mailto:"] {
+    color: #00ccff; /* Default color for email links (example: light blue) */
+}
+
+a[href^="mailto:"]:hover {
+    color: #0099cc; /* Color on hover for email links (darker blue) */
+}
+
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+section p, ul, ol {
+    font-size: 1.1rem; /* Standard font size for other text */
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+section ul, section ol {
+    text-align: left;
+}
+
+section ul li, section ol li {
+    margin: 10px 0;
+}
+
+/* Minecraft-style button */
+button {
+     font-family: 'Minecraftia', sans-serif; /* Apply Minecraft font */
+     font-size: 1rem; /* Adjust button font size */
+     color: #ffffff; /* White text */
+     background-color: #8d8d8d; /* Default Minecraft gray button color */
+     border: 3px solid #3a3a3a; /* Dark border */
+     padding: 10px 20px;
+     cursor: pointer;
+     text-transform: uppercase;
+     outline: none;
+     display: inline-block;
+     box-shadow: 0 5px #3a3a3a; /* Shadow for 3D effect */
+     transition: all 0.2s ease; /* Smooth hover transition */
+ }
+
+ button:hover {
+     background-color: #b3b3b3; /* Lighter gray on hover */
+     box-shadow: 0 3px #3a3a3a; /* Change shadow for hover effect */
+ }
+
+ button:active {
+     box-shadow: none; /* Remove shadow when pressed */
+     transform: translateY(3px); /* Simulate "pressing" button */
+ }
+#rules {
+    font-family: 'Minecraftia', sans-serif; /* Apply Minecraft font */
+    font-size: 2px; /* Adjust button font size */
+    color: #ffffff; /* White text */
+    background-color: #8d8d8d; /* Default Minecraft gray button color */
+    border: 3px solid #3a3a3a; /* Dark border */
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    display: inline-block;
+    box-shadow: 0 5px #3a3a3a; /* Shadow for 3D effect */
+    transition: all 0.2s ease; /* Smooth hover transition */
+}
+
+#rules:hover {
+    background-color: #b3b3b3; /* Lighter gray on hover */
+    box-shadow: 0 3px #3a3a3a; /* Change shadow for hover effect */
+}
+
+#rules:active {
+    box-shadow: none; /* Remove shadow when pressed */
+    transform: translateY(3px); /* Simulate "pressing" button */
+}
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+}
+.discordtxt {
+    color: #7289da; /* Set the desired text color */
+    text-decoration: underline; /* Optional: underline the text */
+}
+
+.discordtxt:hover {
+    color: #ff9900; /* Change color on hover (optional) */
+}
+.youtubetxt {
+    color: #FF0000; /* Set the desired text color */
+    text-decoration: underline; /* Optional: underline the text */
+}
+
+.youtubetxt:hover {
+    color: #ff9900; /* Change color on hover (optional) */
+}
+#notification {
+    background-color: #3c3f41; /* Dark gray background */
+    color: #ffffff; /* White text */
+    padding: 10px 15px; /* Some padding */
+    border: 2px solid #a2a2a2; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 10px; /* Space above the notification */
+    display: none; /* Hidden by default */
+    position: relative; /* For positioning */
+    font-family: 'Minecraftia', cursive; /* Use Minecraft font */
+}
+
+.hidden {
+    display: none; /* Class to hide the notification */
+}
+
+#copy-ip-button {
+     font-family: 'Minecraftia', sans-serif; /* Apply Minecraft font */
+     font-size: 1rem; /* Adjust button font size */
+     color: #ffffff; /* White text */
+     background-color: #8d8d8d; /* Default Minecraft gray button color */
+     border: 3px solid #3a3a3a; /* Dark border */
+     padding: 10px 20px;
+     cursor: pointer;
+     text-transform: uppercase;
+     outline: none;
+     display: inline-block;
+     box-shadow: 0 5px #3a3a3a; /* Shadow for 3D effect */
+     transition: all 0.2s ease; /* Smooth hover transition */
+}
+
+#copy-ip-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+
+
