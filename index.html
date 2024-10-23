@@ -63,6 +63,19 @@
     <p><a href="https://discord.gg/yourserver" target="_blank"><span class="discordtxt">Discord</span></a></p>
 </section>
 
+//errors
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // If the page is not found, redirect to the custom 404 error page
+    fetch(window.location.href).then(function (response) {
+      if (!response.ok) {
+        window.location.href = "/errors/404.html";
+      }
+    });
+  });
+</script>
+
+
 <footer>
     <p>© 2024 Cecilux. All rights reserved.</p>
 </footer>
