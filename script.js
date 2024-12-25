@@ -21,5 +21,5 @@ const copyIpButton = document.getElementById('copy-ip-button');
         setTimeout(() => {
         notification.style.display = 'none'; // Hide it again
         notification.classList.add('hidden');
-        }, 1500); // 1500 milliseconds
+        }, 1400); // 1500 milliseconds
         });
