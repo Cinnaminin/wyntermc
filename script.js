@@ -4,7 +4,7 @@ const copyIpButton = document.getElementById('copy-ip-button');
         const notification = document.getElementById('notification');
 
 // Add a click event listener to the button
-        copyIpButton.addEventListener('click', () => {
+        copy-ip-button.addEventListener('click', () => {
         // Create a temporary textarea element
         const textarea = document.createElement('textarea');
         textarea.value = serverIp.innerText; // Set the value to the server IP
