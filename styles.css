@@ -1,116 +1,141 @@
 @font-face {
     font-family: 'Minecraftia';
-    src: url('fonts/Minecraftia.ttf') format('truetype'); /* Keep the font path */
+    src: url('fonts/Minecraftia.ttf') format('truetype');
 }
 
-/* Reset default browser padding and margin */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Apply a standard font to the entire body */
+main {
+    padding-top: 150px;
+    padding-bottom: 120px;
+    z-index: 1;
+    position: relative;
+}
+
 body {
-    font-family: sans-serif; /* Use a standard font for body text */
-    background-color: #1a1a1a; /* Dark background */
-    color: #f5f5f5;
+    font-family: sans-serif;
+    background-image: url('/assets/wyntermc-server/pre-alpha_lobby.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #51FF85;
     line-height: 1.6;
-    scroll-behavior: smooth; /* Smooth scrolling between sections */
+    scroll-behavior: smooth;
+    padding: 8px;
+}
+
+.fixed-container {
+    position: fixed;
+    left: 8px;
+    right: 8px;
+    z-index: 10;
+}
+
+.fixed-top {
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    position: fixed;
+    z-index: 30;
+}
+
+.fixed-bottom {
+    bottom: 8px;
+}
+
+.fixed-ip-display {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    align-items: center;
+    gap: 4px;
+    margin-top: 200px;
+    color: #FFFF4F;
+    font-family: 'Minecraftia', sans-serif;
+    text-shadow: 3px 3px 0 black;
+}
+
+.ip-address {
+    font-size: 1.8rem;
+}
+
+/* ===== Minecraft UI Box Template ===== */
+.mc-ui-box {
+    background-color: rgba(15, 15, 15, 0.85); /* Dark with 85% opacity */
+    border: 4px solid #8061FF;
     padding: 20px;
 }
 
-/* Header Styles */
+/* ===== Header ===== */
 header {
-    background-color: #333;
-    padding: 20px;
     text-align: center;
+}
+header.mc-ui-box {
+    margin-bottom: 20px;
 }
 
 header h1 {
     font-size: 2.5rem;
-    color: #f5f5f5;
+    color: #FFFF4F;
     font-family: 'Minecraftia';
+    text-shadow: 2px 2px 0px black;
 }
 
+/* ===== Navigation ===== */
 nav {
     margin-top: 10px;
 }
 
 nav ul {
     list-style: none;
-    padding: 0; /* Remove padding */
-    display: flex; /* Use Flexbox */
-    justify-content: center; /* Center the buttons */
-    flex-wrap: nowrap; /* Prevent wrapping */
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
 nav ul li {
-    margin: 0 10px; /* Space between buttons */
+    margin: 0 10px;
 }
 
 nav ul li a {
-    font-family: 'Minecraftia', sans-serif; /* Apply Minecraft font only to buttons */
-    font-size: 1rem; /* Adjust font size */
-    color: #ffAAFF; /* Default text color (white) */
-    background-color: #8d8d8d; /* Default background color for buttons */
-    border: 3px solid #3a3a3a; /* Dark border */
-    padding: 10px 15px; /* Padding for button look */
-    text-decoration: none; /* Remove underline */
-    display: flex; /* Use Flexbox for centering */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    height: 50px; /* Set a fixed height for buttons */
-    min-width: 120px; /* Set a minimum width for buttons */
-    max-width: 200px; /* Optional: Set a maximum width for buttons */
-    box-shadow: 0 5px #3a3a3a; /* Shadow for 3D effect */
-    transition: all 0.2s ease; /* Smooth hover transition */
-}
-
-
-nav ul li a {
-    color: #ffffff; /* Default link color */
+    font-family: 'Minecraftia', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #8d8d8d;
+    border: 3px solid #3a3a3a;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    min-width: 120px;
+    max-width: 200px;
+    box-shadow: 0 5px #3a3a3a;
+    transition: all 0.2s ease;
+    text-shadow: 1px 1px 0 black;
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Color on hover (example: gold) */
+    background-color: #b3b3b3;
+    box-shadow: 0 3px #3a3a3a;
+    color: #ffcc00;
 }
 
 nav ul li a:active {
-    color: #ff9900; /* Color when link is clicked (example: orange) */
+    box-shadow: none;
+    transform: translateY(3px);
+    color: #ff9900;
 }
 
-
-nav ul li a:hover {
-    background-color: #b3b3b3; /* Lighter gray on hover */
-    box-shadow: 0 3px #3a3a3a; /* Change shadow for hover effect */
-}
-
-nav ul li a:active {
-    box-shadow: none; /* Remove shadow when pressed */
-    transform: translateY(3px); /* Simulate "pressing" button */
-}
-/* Style for email links */
-a {
-    color: #ffffff; /* Default link color */
-    text-decoration: none; /* Remove underline */
-}
-
-a:hover {
-    color: #ffcc00; /* Color on hover (example: gold) */
-}
-
-/* Specific style for email link */
-a[href^="mailto:"] {
-    color: #00ccff; /* Default color for email links (example: light blue) */
-}
-
-a[href^="mailto:"]:hover {
-    color: #0099cc; /* Color on hover for email links (darker blue) */
-}
-
-
-/* Section Styles */
+/* ===== Section ===== */
 section {
     padding: 60px 20px;
     text-align: center;
@@ -119,10 +144,11 @@ section {
 section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 0px black;
 }
 
 section p, ul, ol {
-    font-size: 1.1rem; /* Standard font size for other text */
+    font-size: 1.1rem;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -135,113 +161,155 @@ section ul li, section ol li {
     margin: 10px 0;
 }
 
-/* Minecraft-style button */
-button {
-     font-family: 'Minecraftia', sans-serif; /* Apply Minecraft font */
-     font-size: 1rem; /* Adjust button font size */
-     color: #ffffff; /* White text */
-     background-color: #8d8d8d; /* Default Minecraft gray button color */
-     border: 3px solid #3a3a3a; /* Dark border */
-     padding: 10px 20px;
-     cursor: pointer;
-     text-transform: uppercase;
-     outline: none;
-     display: inline-block;
-     box-shadow: 0 5px #3a3a3a; /* Shadow for 3D effect */
-     transition: all 0.2s ease; /* Smooth hover transition */
- }
-
- button:hover {
-     background-color: #b3b3b3; /* Lighter gray on hover */
-     box-shadow: 0 3px #3a3a3a; /* Change shadow for hover effect */
- }
-
- button:active {
-     box-shadow: none; /* Remove shadow when pressed */
-     transform: translateY(3px); /* Simulate "pressing" button */
- }
+/* ===== Minecraft-Style Buttons ===== */
+.mcbutton,
+#copy-ip-button,
 #rules {
-    font-family: 'Minecraftia', sans-serif; /* Apply Minecraft font */
-    font-size: 2px; /* Adjust button font size */
-    color: #ffffff; /* White text */
-    background-color: #8d8d8d; /* Default Minecraft gray button color */
-    border: 3px solid #3a3a3a; /* Dark border */
+    font-family: 'Minecraftia', sans-serif;
+    font-size: 1.099rem;
+    color: #FFFF4F;
+    background-color: #B29FFF;
+    border: 3px solid #7368A5;
     padding: 10px 20px;
     cursor: pointer;
     text-transform: uppercase;
     outline: none;
     display: inline-block;
-    box-shadow: 0 5px #3a3a3a; /* Shadow for 3D effect */
-    transition: all 0.2s ease; /* Smooth hover transition */
+    box-shadow: 0 5px #605889;
+    transition: all 0.2s ease;
+    text-shadow: 1px 2px 0 black;
 }
 
+.mcbutton:hover,
+#copy-ip-button:hover,
 #rules:hover {
-    background-color: #b3b3b3; /* Lighter gray on hover */
-    box-shadow: 0 3px #3a3a3a; /* Change shadow for hover effect */
+    background-color: #7460DB;
+    border: 3px solid #3C3272;
+    box-shadow: 0 3px #57D4E5;
+    color: #57D4E5;
 }
 
+.mcbutton:active,
+#copy-ip-button:active,
 #rules:active {
-    box-shadow: none; /* Remove shadow when pressed */
-    transform: translateY(3px); /* Simulate "pressing" button */
+    box-shadow: none;
+    transform: translateY(3px);
 }
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #f5f5f5;
-    padding: 20px;
+
+/* ===== Footer ===== */
+footer.mc-ui-box {
     text-align: center;
+    color: #f5f5f5;
+    margin-top: 112px;
 }
+/* ===== News Contaimer ===== */
+
+.news-container {
+  display: flex;
+  justify-content: center;
+  padding: 2px 2px;
+}
+
+.news-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid #8061FF;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 100%;
+  overflow: hidden;
+  font-family: inherit;
+}
+
+.news-image-wrapper {
+  position: relative;
+}
+
+.news-image-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+.news-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(10, 10, 10, 0.7);
+  color: #fff;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.news-content {
+  padding: 24px;
+  position: relative;
+}
+
+.news-button {
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 10px 16px;
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.news-button:hover {
+  background-color: #246b44;
+}
+
+/* ===== Special Links ===== */
 .discordtxt {
-    color: #7289da; /* Set the desired text color */
-    text-decoration: underline; /* Optional: underline the text */
+    color: #7289da;
+    text-decoration: underline;
 }
 
 .discordtxt:hover {
-    color: #ff9900; /* Change color on hover (optional) */
+    color: #ff9900;
 }
+
 .youtubetxt {
-    color: #FF0000; /* Set the desired text color */
-    text-decoration: underline; /* Optional: underline the text */
+    color: #FF0000;
+    text-decoration: underline;
 }
 
 .youtubetxt:hover {
-    color: #ff9900; /* Change color on hover (optional) */
-}
-#notification {
-    background-color: #3c3f41; /* Dark gray background */
-    color: #ffffff; /* White text */
-    padding: 10px 15px; /* Some padding */
-    border: 2px solid #a2a2a2; /* Light gray border */
-    border-radius: 5px; /* Rounded corners */
-    margin-top: 10px; /* Space above the notification */
-    display: none; /* Hidden by default */
-    position: relative; /* For positioning */
-    font-family: 'Minecraftia', cursive; /* Use Minecraft font */
+    color: #ff9900;
 }
 
-.hidden {
-    display: none; /* Class to hide the notification */
+/* ===== Copy Message Box ===== */
+#copySvrIP {
+  position: absolute;
+  top: 322px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3c3f41;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: 2px solid #a2a2a2;
+  border-radius: 8px;
+  min-width: 100px;
+  height: auto;
+  display: none;
+  font-family: 'Minecraftia', cursive;
+  text-align: center;
+  z-index: 100;
 }
 
-#copy-ip-button {
-     font-family: 'Minecraftia', sans-serif; /* Apply Minecraft font */
-     font-size: 1rem; /* Adjust button font size */
-     color: #ffffff; /* White text */
-     background-color: #8d8d8d; /* Default Minecraft gray button color */
-     border: 3px solid #3a3a3a; /* Dark border */
-     padding: 10px 20px;
-     cursor: pointer;
-     text-transform: uppercase;
-     outline: none;
-     display: inline-block;
-     box-shadow: 0 5px #3a3a3a; /* Shadow for 3D effect */
-     transition: all 0.2s ease; /* Smooth hover transition */
+.joinsvrimg {
+  width: 60%;
+  height: 500px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  padding: 50px 0;
 }
-
-#copy-ip-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
-
-
-

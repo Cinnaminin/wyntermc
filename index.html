@@ -1,72 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WynterMC</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.png" type="image/png">
-
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+    <link rel="icon" href="favicon.png" type="image/png" />
 </head>
 <body>
 
-<header>
-    <h1>WynterMC</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="games.html">Games</a></li>
-            <li><a href="rules.html">Policies</a></li>
-            <li><a href="contact.html" id="contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+<!-- Fixed Header Container -->
+<div class="fixed-container fixed-top">
+    <!-- Main Header Box -->
+    <header class="mc-ui-box">
+        <h1>WynterMC</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="mcbutton">Home</a></li>
+                <li><a href="games.html" class="mcbutton">Games</a></li>
+                <li><a href="play.html" class="mcbutton">Play</a></li>
+                <li><a href="contact.html" class="mcbutton">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+</div>
 
-<section id="join">
-    <h2>How to Join Our Server</h2>
-    <p>Joining is simple! Follow these steps:</p>
-    <ol>
-        <li>Launch Minecraft (version: <strong>1.8 - 1.21</strong>)</li>
-        <li>Go to "Multiplayer" and click "Add Server"</li>
-        <li>Enter the server IP: <strong id="server-ip">play.wyntermc.com</strong></li>
-        <li>Click the button below to copy the IP address.</li>
-    </ol>
-    <button id="copy-ip-button">Copy IP</button>
-    <div id="notification" class="hidden">IP address copied to clipboard!</div>
-</section>
+<!-- Main Scrollable Content -->
+<main>
 
-<section id="features">
-    <h2>Server Features</h2>
-    <p>placeholder</p>
-    <ul>
-        <li>Custom Plugins: <strong>Advanced Economy, RPG Elements</strong></li>
-        <li>Game Modes: <strong>Survival, Creative, Minigames</strong></li>
-        <li>Events: <strong>Monthly Tournaments, Build Competitions</strong></li>
-    </ul>
-</section>
+    <section id="news">
+        <div class="news-container">
+            <div class="news-box">
+                <div class="news-image-wrapper">
+                    <img src="/assets/placeholderimages/no_image_1440p.png" alt="News Image">
+                    <div class="news-header-overlay">
+                        <span class="news-title">Big Update Released!</span>
+                        <span class="news-date">May 27, 2025</span>
+                    </div>
+                </div>
+                <div class="news-content">
+                    <p>We just rolled out a massive update featuring new minigames, custom cosmetics, and a reworked hub. Don’t miss out!</p>
+                    <a href="news-page.html" class="news-button">Continue</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="rules">
-    <h2>Server Rules</h2>
-    <p>To keep our community fun and friendly, please follow these rules:</p>
-    <ul>
-        <li>No hacking</li>
-        <li>Be respectful to all players</li>
-        <li>No spamming in chat</li>
-        <li>No Inappropriate Content and Cosmetics</li>
-        <li>No hate towards a specific group</li>
-    </ul>
-</section>
+    <section id="socials">
+        <h2>Socials:</h2>
+        <p>Here are all of our socials!</p>
+        <p><a href="https://youtube.com/@WynterMC" target="_blank"><span class="youtubetxt">YouTube</span></a></p>
+        <p><a href="https://discord.gg/yourserver1" target="_blank"><span class="discordtxt">Discord</span></a></p>
+    </section>
+</main>
 
-<section id="socials">
-    <h2>Socials:</h2>
-    <p>Here are all of our socials!</p>
-    <p><a href="https://youtube.com/@WynterMC" target="_blank"><span class="youtubetxt">YouTube</span></a></p>
-    <p><a href="https://discord.gg/yourserver1" target="_blank"><span class="discordtxt">Discord</span></a></p>
-</section>
-
-<footer>
-    <p>© 2024 WynterMC. All rights reserved.</p>
-</footer>
+<!-- Fixed Footer Container -->
+<div class="fixed-container fixed-bottom">
+    <footer class="mc-ui-box">
+        <p>© 2025 WynterMC. All rights reserved.</p>
+    </footer>
+</div>
 
 </body>
 </html>

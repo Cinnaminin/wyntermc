@@ -1,25 +1,21 @@
-// Get references to the IP text, button, and notification elements
-const copyIpButton = document.getElementById('copy-ip-button');
-        const serverIp = document.getElementById('server-ip');
-        const notification = document.getElementById('notification');
+                function copyToClipboard() {
+                    var textToCopy = "play.wyntermc.com";
 
-// Add a click event listener to the button
-        copy-ip-button.addEventListener('click', () => {
-        // Create a temporary textarea element
-        const textarea = document.createElement('textarea');
-        textarea.value = serverIp.innerText; // Set the value to the server IP
-        document.body.appendChild(textarea); // Append it to the body
-        textarea.select(); // Select the text
-        document.execCommand('copy'); // Execute the copy command
-        document.body.removeChild(textarea); // Remove the textarea
+                    var tempTextArea = document.createElement("textarea");
 
-        // Show notification
-        notification.classList.remove('hidden');
-        notification.style.display = 'block'; // Show the notification
+                    tempTextArea.value = textToCopy;
 
-        // Hide notification after 1.5 seconds
-        setTimeout(() => {
-        notification.style.display = 'none'; // Hide it again
-        notification.classList.add('hidden');
-        }, 1400); // 1500 milliseconds
-        });
+                    document.body.appendChild(tempTextArea);
+
+                    tempTextArea.select();
+
+                    document.execCommand("copy");
+
+                    document.body.removeChild(tempTextArea);
+
+                    var copyMessage = document.getElementById("copySvrIP");
+                    copyMessage.style.display = "flex";
+                    setTimeout(function () {
+                        copyMessage.style.display = "none";
+                    }, 2300);
+                }

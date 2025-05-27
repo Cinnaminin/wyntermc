@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WynterMC</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+  <link rel="icon" href="favicon.png" type="image/png" />
+</head>
+<body>
+
+<!-- Fixed Header Container -->
+<div class="fixed-container fixed-top">
+  <!-- Main Header Box -->
+  <header class="mc-ui-box">
+    <h1>WynterMC</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="mcbutton">Home</a></li>
+        <li><a href="games.html" class="mcbutton">Games</a></li>
+        <li><a href="play.html" class="mcbutton">Play</a></li>
+        <li><a href="contact.html" class="mcbutton">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
+
+<!-- Floating IP Info -->
+<div class="fixed-container fixed-ip">
+  <div class="fixed-ip-display">
+    <span class="ip-address">Server IP: play.wyntermc.com</span>
+    <button id="copy-ip-button" onclick="copyToClipboard()">Copy IP</button>
+    <div id="copySvrIP" class="ipcopysuccsess">IP address copied to clipboard!</div>
+    <img id="joinsvrimg" class="joinsvrimg" src="/assets/wyntermc-server/joinsvr.png" alt="Join Server Steps"/>
+  </div>
+</div>
+</body>
+</html>
