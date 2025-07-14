@@ -6,28 +6,35 @@
     <link rel="icon" href="favicon.png" type="image/png">
     <title>404 - Page Not Found</title>
     <style>
+    @font-face {
+      font-family: 'Minecraftia';
+      src: url('fonts/Minecraftia.ttf') format('truetype');
+    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Minecraftia';
       text-align: center;
-      padding: 50px;
+      padding: 1px;
       font-size: 16px;
     }
     h1 {
-      font-size: 135px;
-      margin-bottom: 1px;
+      font-size: 125px;
+      margin-bottom: -105px;
     }
     h2 {
       font-size: 50px;
-      margin-top: 1px;
-      margin-bottom: 20px;
+      margin-top: 0.4px;
+      margin-bottom: 10px;
     }
     p {
       font-size: 20px;
-      margin-top: 10px;
+      margin-top: 5px;
     }
     .url {
       color: red;
       word-wrap: break-word;
+    }
+    .gbth:hover {
+      color: #57D4E5;
     }
   </style>
 </head>
@@ -35,7 +42,7 @@
 <h1>404</h1>
 <h2>Oh No! We ran into an error!</h2>
 <p>The requested URL <span class="url" id="url"></span> was not found on our server. That’s all we know.</p>
-<p><a href="/">Go back to the homepage</a></p>
+<p><a href="/" class="gbth">Go back to the homepage</a></p>
 
 <script>
     document.getElementById('url').textContent = window.location.href;
